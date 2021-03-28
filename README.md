@@ -72,7 +72,7 @@ sudo_sudoers_file: ansible
 # path of the sudoers.d directory
 sudo_sudoers_d_path: /etc/sudoers.d
 # delete other files in `sudo_sudoers_d_path`
-purge_other_sudoers_files: no
+sudo_purge_other_files: no
 
 ```
 
@@ -112,7 +112,7 @@ This is an example playbook:
       - name: '%group4'
         users: 'user1,user2'
         groups: 'group1,group2'
-    purge_other_sudoers_files: yes
+    sudo_purge_other_files: yes
 
 ```
 
